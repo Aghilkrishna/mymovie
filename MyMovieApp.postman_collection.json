@@ -1,0 +1,127 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MyMovieApp",
+		"_postman_id": "aca5eab1-4928-92ff-7610-7c4d771b97fb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/login/createUser",
+			"request": {
+				"url": "http://localhost:8080/login/createUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"aghil\",\n\t\"password\":\"test\",\n\t\"mobile\":\"9003121507\",\n\t\"email\":\"aghilkrishna@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login/validateuser",
+			"request": {
+				"url": "http://localhost:8080/login/validateuser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"aghilkrishna@gmail.com\",\n\t\"password\":\"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login/logmeout",
+			"request": {
+				"url": "http://localhost:8080/login/logmeout",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket/block",
+			"request": {
+				"url": "http://localhost:8080/ticket/block",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "JSESSIONID",
+						"value": "AB1722EF3E1B2D78A201528B14818746",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"movieScreen\": {\n        \"id\": 1,\n        \"name\": \"Screen 1\"\n    },\n    \"movie\": {\n        \"id\": 1,\n        \"name\": \"Kong: Skull Island\"\n    },\n    \"user\": {\n        \"id\": 1\n    },\n    \"employee\": null,\n    \"seats\": [\n        {\n            \"id\": 1\n        },\n        {\n            \"id\": 2\n        }\n    ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket/confirm",
+			"request": {
+				"url": "http://localhost:8080/ticket/confirm",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"statusCode\": 0,\n    \"trackId\": \"9ZVM2D98\",\n    \"errorDescription\": null,\n    \"id\": 16,\n    \"movieScreen\": {\n        \"statusCode\": 2000,\n        \"trackId\": null,\n        \"errorDescription\": null,\n        \"id\": 1,\n        \"name\": \"Screen 1\",\n        \"status\": null,\n        \"screeningStartTime\": null,\n        \"screeningEndTime\": null,\n        \"createdBy\": null,\n        \"modifiedBy\": null,\n        \"createdTime\": null,\n        \"modifiedTime\": null,\n        \"movieDto\": null\n    },\n    \"movie\": {\n        \"statusCode\": 2000,\n        \"trackId\": null,\n        \"errorDescription\": null,\n        \"id\": 1,\n        \"name\": \"Kong: Skull Island\",\n        \"director\": null,\n        \"description\": null,\n        \"durationInMins\": 0,\n        \"theatreDto\": null,\n        \"movieType\": null,\n        \"movieStatus\": null\n    },\n    \"screeningStartTime\": null,\n    \"screeningEndTime\": null,\n    \"paymentType\": null,\n    \"paymentStatus\": null,\n    \"bookingStatus\": null,\n    \"user\": {\n        \"statusCode\": 2000,\n        \"trackId\": null,\n        \"errorDescription\": null,\n        \"id\": 1,\n        \"name\": null,\n        \"password\": null,\n        \"dob\": null,\n        \"mobile\": null,\n        \"email\": null\n    },\n    \"employee\": null,\n    \"seats\": [\n        {\n            \"statusCode\": 2000,\n            \"trackId\": null,\n            \"errorDescription\": null,\n            \"id\": 2,\n            \"row\": 0,\n            \"seatNumber\": 0,\n            \"seatType\": null,\n            \"seatStatus\": null,\n            \"movieScreenDto\": null\n        },\n        {\n            \"statusCode\": 2000,\n            \"trackId\": null,\n            \"errorDescription\": null,\n            \"id\": 1,\n            \"row\": 0,\n            \"seatNumber\": 0,\n            \"seatType\": null,\n            \"seatStatus\": null,\n            \"movieScreenDto\": null\n        }\n    ],\n    \"createdBy\": null,\n    \"modifiedBy\": null,\n    \"createdTime\": null,\n    \"modifiedTime\": null\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket/cancel",
+			"request": {
+				"url": "http://localhost:8080/ticket/cancel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"statusCode\": 0,\n    \"trackId\": \"UWDCL64N\",\n    \"errorDescription\": null,\n    \"id\": 15,\n    \"movieScreen\": {\n        \"statusCode\": 2000,\n        \"trackId\": null,\n        \"errorDescription\": null,\n        \"id\": 1,\n        \"name\": \"Screen 1\",\n        \"status\": null,\n        \"screeningStartTime\": null,\n        \"screeningEndTime\": null,\n        \"createdBy\": null,\n        \"modifiedBy\": null,\n        \"createdTime\": null,\n        \"modifiedTime\": null,\n        \"movieDto\": null\n    },\n    \"movie\": {\n        \"statusCode\": 2000,\n        \"trackId\": null,\n        \"errorDescription\": null,\n        \"id\": 1,\n        \"name\": \"Kong: Skull Island\",\n        \"director\": null,\n        \"description\": null,\n        \"durationInMins\": 0,\n        \"theatreDto\": null,\n        \"movieType\": null,\n        \"movieStatus\": null\n    },\n    \"screeningStartTime\": null,\n    \"screeningEndTime\": null,\n    \"paymentType\": null,\n    \"paymentStatus\": null,\n    \"bookingStatus\": null,\n    \"user\": {\n        \"statusCode\": 2000,\n        \"trackId\": null,\n        \"errorDescription\": null,\n        \"id\": 1,\n        \"name\": null,\n        \"password\": null,\n        \"dob\": null,\n        \"mobile\": null,\n        \"email\": null\n    },\n    \"employee\": null,\n    \"seats\": [\n        {\n            \"statusCode\": 2000,\n            \"trackId\": null,\n            \"errorDescription\": null,\n            \"id\": 2,\n            \"row\": 0,\n            \"seatNumber\": 0,\n            \"seatType\": null,\n            \"seatStatus\": null,\n            \"movieScreenDto\": null\n        },\n        {\n            \"statusCode\": 2000,\n            \"trackId\": null,\n            \"errorDescription\": null,\n            \"id\": 1,\n            \"row\": 0,\n            \"seatNumber\": 0,\n            \"seatType\": null,\n            \"seatStatus\": null,\n            \"movieScreenDto\": null\n        }\n    ],\n    \"createdBy\": null,\n    \"modifiedBy\": null,\n    \"createdTime\": null,\n    \"modifiedTime\": null\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
